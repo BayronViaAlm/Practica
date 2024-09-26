@@ -1,0 +1,19 @@
+// Formato tokens: del* < del* código del* , del* [atributo] del* > del* RE
+/* Dónde:
+- del*  cualquier cantidad de espacios en blanco o tabuladores, o nada.
+- código  el código del token correspondiente, con el siguiente formato:
+• (l|d)+  caracteres alfanuméricos, habiendo al menos uno.
+- atributo  el atributo opcional del token correspondiente, que puede tener uno de los siguientes
+formatos:
+• nombre: (l|d)+  caracteres alfanuméricos, habiendo al menos uno
+• número: [+|-]d+  número entero con signo opcional
+• cadena: "c*"  cadena de caracteres
+- RE  salto de línea (RC) o Fin de Fichero (EOF) */
+
+<IF, > //Token if sin atributo
+<ELSE, > //Token else sin atributo
+// Para los tokens anteriores tambien podria usarse <PalRes, n> sinedo n la posicion en la tabla 
+<OPC, 7> //Token comparador compuesto asignacion con OR logico
+<CAD, lex> //Token cadena para los comentarios
+
+// El comentario /* */ no genera token pero sera reconocido por el analizador lexico
