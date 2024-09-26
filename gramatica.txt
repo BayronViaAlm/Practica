@@ -48,7 +48,7 @@ H --> eI
 I --> delI | {J 
 J --> crD | cD | }                  // Hasta aqui se reconoceria if{}else{}
 
-INTENTO 3
+INTENTO 3 //ESTE ES EL BUENO
 A --> iB | dO | " | /T | delA | crA     //Inicios de if, if-else, |=, cadena y /* */
 B --> fC
 C --> (D 
