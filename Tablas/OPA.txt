@@ -1,0 +1,7 @@
+//Tabla de operadores aritmeticos
+OPA         VALOR
++           1
+-           2
+*           3
+/           4
+&           5

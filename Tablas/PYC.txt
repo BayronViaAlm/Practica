@@ -1,0 +1,6 @@
+//Tabla de signos de puntuacion
+PYC         Valor
+.           1
+,           2
+:           3
+;           4

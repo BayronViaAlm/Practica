@@ -1,0 +1,12 @@
+//Tabla de operadores compuestos
+OPC         VALOR
++=          1
+-=          2
+*=          3
+/=          4
+%=          5
+&=          6
+|=          7   //Este lo tenemos en la practica. Asignacion con OR Logico
+^=          8   //XOR   
+<<=         9   //Des. Izq.
+>>=         10  //Des. Der.

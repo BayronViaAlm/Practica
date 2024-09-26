@@ -1,0 +1,5 @@
+//Tabla de operadores logicos
+OPL         VALOR
+&&          1
+||          2
+!           3
