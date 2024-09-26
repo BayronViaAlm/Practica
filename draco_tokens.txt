@@ -1,0 +1,42 @@
+// Aqui estan indicados como rellenar el formulario de draco para los tokens
+boolean -->             <BOOLEAN, ->
+else -->                <ELSE, ->
+function -->            <FUNC, ->
+if -->                  <IF, ->
+input -->               <IN, ->
+int -->                 <ENT, n>        /? Esto es tipo entero o el valor entero?
+output -->              <OUT, ->
+return -->              <RET, ->
+string -->              <ST, ->         /? Esto es tipo string?
+var -->                 <VAR, lex>      /? Atributo es opcional pero se necesita el nombre de la variable, no?
+void -->                <VOID, ->
+constante entera -->    <CONST, n>
+cadena -->              <CAD, lex>
+identificador -->       <ID, n>
+= -->                   <ASIG, ->
+|= -->                  <OPC, 7>
+, -->                   <PYC, 2>
+; -->                   <PYC, 4>
+( -->                   <PAR, 1>
+) -->                   <PAR, 2>
+{ -->                   <LLA, 1>
+} -->                   <LLA, 2>
++ -->                   <OPA, 1>             
+* -->                   <OPA, 3>
+- -->                   <OPA, 2>
+/ -->                   <OPA, 4>
+% -->                   <OPA, 5>            
+&& -->                  <OPL, 1>
+|| -->                  <OPL, 2>
+! -->                   <OPL, 3>
+< -->                   <OPR, 1>                 
+<= -->                  <OPR, 2>
+> -->                   <OPR, 3>
+>= -->                  <OPR, 4>
+!= -->                  <OPR, 5>
+== -->                  <OPR, 6>
+- (UNARIO)              <NEG, ->
++ (UNARIO)              <POS, ->
+false                   <FALSE, ->
+true                    <POS, ->
+EOF                     <EOF, ->

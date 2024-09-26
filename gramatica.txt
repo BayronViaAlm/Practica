@@ -1,0 +1,74 @@
+//Gramatica del interprete
+//Tiene que reconocer if, if-else, |=, "cadena" y /*comentario*/
+//ESTRUCTURTA IF 
+if(){}
+
+//ESTRUCTURA IF-ELSE
+if(){
+
+}else{
+
+}
+
+//ESTRUCTURA |=
+a |= b; a = 5 (101), b = 3 (011) --> a = 7 (111)
+
+//ESTRUCTURA CADENA
+"cadena" = "l*d*"
+
+//COMENTARIO
+/* [c]* [*]* [cr*]* [c]* */ 
+
+
+INTENTO 1
+A --> iB | |H | "I | K/ | delA
+B --> fC 
+C --> lambda | {D
+D --> eE 
+E --> lF
+F --> sG 
+G --> e
+H --> =
+I --> lJ | dJ
+J --> lJ | dJ | "
+K --> *L | 
+L --> cL | *M | crN
+M --> cL | *M | crN | /
+N --> *M
+
+INTENTO 2
+A --> iB
+B --> fC
+C --> delC | {D                     /? Pueden haber espacios, tabuladores, ect entre 'if' y '{' o el compilador los elimina?
+D --> crD | cD | }E     
+E --> lambda | eF                   // Hasta aqui se reconoceria if{}
+F --> lG
+G --> sH
+H --> eI
+I --> delI | {J 
+J --> crD | cD | }                  // Hasta aqui se reconoceria if{}else{}
+
+INTENTO 3
+A --> iB | dO | " | /T | delA | crA     //Inicios de if, if-else, |=, cadena y /* */
+B --> fC
+C --> (D 
+D --> lE | dE
+E--> lE | dE | )F
+F --> delF | crF | {G                   /? Un salto de linea es un delimitador?
+G --> cH
+H --> cH | delH | crH | }I              // Hasta aqui se reconoceria if(){}
+I --> delI | e|J 
+J --> lK
+K --> sL 
+L --> eM 
+M --> delM | crM | {N
+N --> cH | delH | crH | }               // Hasta aqui se reconoceria if(){}else{}
+O --> dO | delP                         /? Tengo que reconocer numeros?
+P --> delP | |Q 
+Q --> =R                                // Hasta aqui se reconoceria |=
+R --> dR | lambda                       //El otro digito
+S --> cS | delS | "                     //Hasta aqui se reconoceria la cadena
+T --> *U
+U --> cU | *V | delU | crX
+V --> cU | *V | delU | crX | /          // Hasta aqui se reconoceria el comentario
+X --> *V
