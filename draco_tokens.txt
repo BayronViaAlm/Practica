@@ -8,7 +8,7 @@ int -->                 <ENT, n>        /? Esto es tipo entero o el valor entero
 output -->              <OUT, ->
 return -->              <RET, ->
 string -->              <ST, ->         /? Esto es tipo string?
-var -->                 <VAR, lex>      /? Atributo es opcional pero se necesita el nombre de la variable, no?
+var -->                 <VAR, ->      /? Atributo es opcional pero se necesita el nombre de la variable, no?
 void -->                <VOID, ->
 constante entera -->    <CONST, n>
 cadena -->              <CAD, lex>
