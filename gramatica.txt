@@ -1,5 +1,6 @@
 //Gramatica del interprete
-//Tiene que reconocer if, if-else, |=, "cadena" y /*comentario*/
+//Tiene que reconocer if, if-else, |=, "cadena" y /*comentario*/ DE FORMA OBLIGATORIA
+//Tiene que reconocer +, && y >=
 //ESTRUCTURTA IF 
 if(){}
 
@@ -49,7 +50,7 @@ I --> delI | {J
 J --> crD | cD | }                  // Hasta aqui se reconoceria if{}else{}
 
 INTENTO 3 //ESTE ES EL BUENO
-A --> iB | dO | " | /T | delA | crA     //Inicios de if, if-else, |=, cadena y /* */
+A --> iB | dO | " | /T | delA | crA  | + | &Y | >Z   //Inicios de if, if-else, |=, cadena, /* */, & y >, reconoce +
 B --> fC
 C --> (D 
 D --> lE | dE
@@ -72,3 +73,5 @@ T --> *U
 U --> cU | *V | delU | crX
 V --> cU | *V | delU | crX | /          // Hasta aqui se reconoceria el comentario
 X --> *V
+Y --> &                                 // Hasta aqui se reconoceria el &&
+Z --> =                                 // Hasta aqui se reconoceria el >=
