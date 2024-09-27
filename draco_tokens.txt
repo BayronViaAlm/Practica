@@ -4,39 +4,39 @@ else -->                <ELSE, ->
 function -->            <FUNC, ->
 if -->                  <IF, ->
 input -->               <IN, ->
-int -->                 <ENT, n>        /? Esto es tipo entero o el valor entero?
+int -->                 <INT, ->            /? Esto es tipo entero o el valor entero? Tipo 
 output -->              <OUT, ->
 return -->              <RET, ->
-string -->              <ST, ->         /? Esto es tipo string?
-var -->                 <VAR, lex>      /? Atributo es opcional pero se necesita el nombre de la variable, no?
+string -->              <STR, ->            /? Esto es tipo string? Tipo String
+var -->                 <VAR, ->            /? Atributo es opcional pero se necesita el nombre de la variable, no? Es tipo Var
 void -->                <VOID, ->
 constante entera -->    <CONST, n>
 cadena -->              <CAD, lex>
 identificador -->       <ID, n>
 = -->                   <ASIG, ->
-|= -->                  <OPC, 7>
-, -->                   <PYC, 2>
-; -->                   <PYC, 4>
-( -->                   <PAR, 1>
-) -->                   <PAR, 2>
-{ -->                   <LLA, 1>
-} -->                   <LLA, 2>
-+ -->                   <OPA, 1>             
-* -->                   <OPA, 3>
-- -->                   <OPA, 2>
-/ -->                   <OPA, 4>
-% -->                   <OPA, 5>            
-&& -->                  <OPL, 1>
-|| -->                  <OPL, 2>
-! -->                   <OPL, 3>
-< -->                   <OPR, 1>                 
-<= -->                  <OPR, 2>
-> -->                   <OPR, 3>
->= -->                  <OPR, 4>
-!= -->                  <OPR, 5>
-== -->                  <OPR, 6>
+|= -->                  <ASIG_OR, ->        //Hacemos esta
+, -->                   <COMA, ->
+; -->                   <PYC, ->
+( -->                   <PAR_I, ->
+) -->                   <PAR_D, ->
+{ -->                   <LLA_I, ->
+} -->                   <LLA_D, ->
++ -->                   <SUM, ->            //Hacemos esta
+* -->                   <MUL, ->       
+- -->                   <MENOS, ->
+/ -->                   <DIV, ->
+% -->                   <MOD, ->            
+&& -->                  <AND, ->            //Hacemos esta
+|| -->                  <OR, ->
+! -->                   <NOT, ->
+< -->                   <MENOR, ->                 
+<= -->                  <MENOR_I, ->
+> -->                   <MAYOR, ->
+>= -->                  <MAYOR_I, ->
+!= -->                  <NO_I, ->
+== -->                  <IGUAL, ->          //Hacemos esta
 - (UNARIO)              <NEG, ->
 + (UNARIO)              <POS, ->
 false                   <FALSE, ->
-true                    <POS, ->
+true                    <TRUE, ->
 EOF                     <EOF, ->

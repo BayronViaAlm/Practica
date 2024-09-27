@@ -49,7 +49,7 @@ H --> eI
 I --> delI | {J 
 J --> crD | cD | }                  // Hasta aqui se reconoceria if{}else{}
 
-INTENTO 3 //ESTE ES EL BUENO
+INTENTO 3 /*ESTE ES EL BUENO/ YA NO
 A --> iB | dO | " | /T | delA | crA  | + | &Y | >Z   //Inicios de if, if-else, |=, cadena, /* */, & y >, reconoce +
 B --> fC
 C --> (D 
@@ -75,3 +75,5 @@ V --> cU | *V | delU | crX | /          // Hasta aqui se reconoceria el comentar
 X --> *V
 Y --> &                                 // Hasta aqui se reconoceria el &&
 Z --> =                                 // Hasta aqui se reconoceria el >=
+
+INTENTO 4
