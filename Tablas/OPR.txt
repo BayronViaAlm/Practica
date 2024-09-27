@@ -1,4 +1,4 @@
-//Tabla de operadores relacionales
+//Tabla de operadores relacionales// No se usa
 OPR         VALOR
 <           1
 <=          2

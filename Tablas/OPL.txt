@@ -1,4 +1,4 @@
-//Tabla de operadores logicos
+//Tabla de operadores logicos// No se usa
 OPL         VALOR
 &&          1
 ||          2

@@ -1,4 +1,4 @@
-//Tabla de operadores aritmeticos
+//Tabla de operadores aritmeticos// No se sua
 OPA         VALOR
 +           1
 -           2

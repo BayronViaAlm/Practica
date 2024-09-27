@@ -1,4 +1,4 @@
-//Tabla de signos de puntuacion
+//Tabla de signos de puntuacion //No se usa
 PYC         Valor
 .           1
 ,           2
