@@ -7,8 +7,8 @@ input -->               <IN, ->
 int -->                 <INT, ->            /? Esto es tipo entero o el valor entero? Tipo 
 output -->              <OUT, ->
 return -->              <RET, ->
-string -->              <ST, ->         /? Esto es tipo string?
-var -->                 <VAR, lex>      /? Atributo es opcional pero se necesita el nombre de la variable, no?
+string -->              <STR, ->         /? Esto es tipo string? Si
+var -->                 <VAR, ->        /? Atributo es opcional pero se necesita el nombre de la variable, no? Es tipo VAR
 void -->                <VOID, ->
 constante entera -->    <CONST, n>
 cadena -->              <CAD, lex>
@@ -17,10 +17,10 @@ identificador -->       <ID, n>
 |= -->                  <ASIG_OR, ->        //Hacemos esta
 , -->                   <COMA, ->
 ; -->                   <PYC, ->
-( -->                   <PAR_I, ->
-) -->                   <PAR_D, ->
-{ -->                   <LLA_I, ->
-} -->                   <LLA_D, ->
+( -->                   <PARIZQ, ->
+) -->                   <PARDER, ->
+{ -->                   <LLAIZQ, ->
+} -->                   <LLADER, ->
 + -->                   <SUM, ->            //Hacemos esta
 * -->                   <MUL, ->       
 - -->                   <MENOS, ->
@@ -30,10 +30,10 @@ identificador -->       <ID, n>
 || -->                  <OR, ->
 ! -->                   <NOT, ->
 < -->                   <MENOR, ->                 
-<= -->                  <MENOR_I, ->
+<= -->                  <MENORIG, ->
 > -->                   <MAYOR, ->
->= -->                  <MAYOR_I, ->
-!= -->                  <NO_I, ->
+>= -->                  <MAYORIG, ->
+!= -->                  <NOIG, ->
 == -->                  <IGUAL, ->          //Hacemos esta
 - (UNARIO)              <NEG, ->
 + (UNARIO)              <POS, ->
