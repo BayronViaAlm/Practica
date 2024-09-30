@@ -79,7 +79,7 @@ Z --> =                                 // Hasta aqui se reconoceria el >=
 INTENTO 4
 0-  A --> delA | dB | lC | "D | /E | |H | =I | &J | , | ; | ( | ) | { | } | + | eof     //Reconoce ',', ';', (, ), {, }, + y eof
 1-  B --> dB | 𝜆                                                                        //Reconoce numeros
-2-  C --> dC | lC | _C | 𝜆                                                              //Reconoce nombre variables
+2-  C --> dC | lC | _C | 𝜆                                                              //Reconoce nombre variables y palabras reservadas (if, else, int, string....)
 3-  D --> cD | "                                                                        //Reconoce lexemas
 4-  E --> *F |
 5-  F --> cF | *G | crE
