@@ -1,0 +1,37 @@
+Acciones semánticas:
+
+LEER(): todas las transiciones menos las de 0.c.
+0-24: GENTOKEN(EOF, -)
+0-23: GENTOKEN(SUM, -)
+0-22: GENTOKEN(LLADER, -)
+0-21: GENTOKEN(LLAIZQ, -)
+0-20: GENTOKEN(PARDER, -)
+0-19: GENTOKEN(PARIZQ, -)
+0-18: GENTOKEN(PYC, -)
+0-17: GENTOKEN(COMA, -)
+
+0-1: numero := d
+1-1: numero := numero * 10 + d
+1-10: if(numero > 32767) then Error(“Entero fuera de rango”)
+    else GENTOKEN(CONST, numero)
+
+0-2: lex := l
+2-2: lex := lex + d|l|_
+2-11: if(lex ∈ PalRes) then GenToken(PalRes,-) //Añadir el estado terminal 11 en el dibujo de transiciones de estados y sumarle +1 a los siguientes
+    else p := buscarTS(lex)
+ if(p=null) then p := insertarTS(lex); GenToken(ID,p)
+    else Error(“Identificador ya declarado”)
+
+0-3: lex:=null; cont:=0
+3-3: lex := lex + c; cont++
+6:13: if(cont>64) then Error(“Cadena fuera de rango”)
+else GENTOKEN(cad, lex) 
+
+
+7-13: GENTOKEN(ASIGOR, -)
+8-14: GENTOKEN(IGUAL, -)
+8-15: GENTOKEN(ASIG, -)
+9-16: GENTOKEN(AND, -)
+
+
+

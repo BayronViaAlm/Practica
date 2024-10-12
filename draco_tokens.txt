@@ -14,7 +14,7 @@ constante entera -->    <CONST, n>
 cadena -->              <CAD, lex>
 identificador -->       <ID, n>
 = -->                   <ASIG, ->
-|= -->                  <ASIG_OR, ->        //Hacemos esta
+|= -->                  <ASIGOR, ->        //Hacemos esta
 , -->                   <COMA, ->
 ; -->                   <PYC, ->
 ( -->                   <PARIZQ, ->
